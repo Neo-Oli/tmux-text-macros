@@ -13,5 +13,5 @@ for e in "${strings[@]}"; do
     echo $e
 done|fzf-tmux|sed -e 's/\\/\\\\/g' -e 's/\(.*\):.*/\1/'|xargs -I_ tmux send-keys '_'
 else
-    tmux bind e run-shell "$0" -r"
+    tmux bind e run-shell "$0 -r"
 fi
