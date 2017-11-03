@@ -4,6 +4,7 @@ strings=(
 "¯\\_(ツ)_/¯:a Shruggie"
 "ಠ_ಠ: Look of Disaprooval"
 "(V) (;,,;) (V): Why not Zoidberg?"
+"ʕ⁰̈●̫⁰̈ʔ: Bear"
 )
 
 
