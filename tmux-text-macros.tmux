@@ -15,24 +15,24 @@ tmux_macros() {
         local load_defaults=$(get_tmux_option "@load-default-macros" "on")
 
         #Macro strings. Everything after the last ":" gets removed and is just there as a search string in fzf
-        local defaultstrings=(
-        "¯\\_(ツ)_/¯:a Shruggie"
-        "ಠ_ಠ: Look of Disaprooval"
-        "(V) (;,,;) (V): Why not Zoidberg?"
-        "ʕ⁰̈●̫⁰̈ʔ: Bear"
-        "( ͡° ͜ʖ ͡°):Lenny"
-        "(╯°□°）╯︵ ┻━┻:Table flip"
-        "(•___• )"
-        )
         local BASEDIR=$(dirname $0)
-        source $BASEDIR/emojis.sh
+
         custom=()
         if [ -e "$HOME/.tmux/custom-macros" ];then
             source $HOME/.tmux/custom-macros
         fi
         alldefaults=()
         if [ "$load_defaults" = "on" ];then
-            alldefaults=("${strings[@]}" "${emojis[@]}")
+            source $BASEDIR/emojis.sh
+            source $BASEDIR/emoticons.sh
+            source $BASEDIR/blocks.sh
+            source $BASEDIR/boxdrawing.sh
+            alldefaults=(
+                "${emoticons[@]}"
+                "${emojis[@]}"
+                "${blocks[@]}"
+                "${boxdrawing[@]}"
+            )
         fi
         all=("${alldefaults[@]}" "${custom[@]}")
         for e in "${all[@]}"; do
