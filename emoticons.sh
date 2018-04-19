@@ -1,4 +1,4 @@
-moticons=(
+emoticons=(
 '¯\_(ツ)_/¯: Shruggie [emoticon]'
 'ಠ_ಠ: Look of Disaproval [emoticon]'
 '(V)g(;,,;) (V): Why not Zoidberg? [emoticon]'
