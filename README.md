@@ -2,6 +2,8 @@ tmux-text-macros is a tmux plugin. It let's you define a bunch of strings, from 
 
 By default it contains all the emojis and a few emoticons
 
+![Demo](https://raw.githubusercontent.com/Neo-Oli/tmux-text-macros/master/demo.gif)
+
 ## Requirements
 
 * [fzf](https://github.com/junegunn/fzf)
