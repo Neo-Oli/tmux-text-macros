@@ -3,6 +3,7 @@ tmux-text-macros is a tmux plugin. It let's you define a bunch of strings, from 
 ## Requirements
 
 * [fzf](https://github.com/junegunn/fzf)
+* [fzf-tmux](https://github.com/junegunn/fzf#fzf-tmux-script)
 
 ## Installation
 
