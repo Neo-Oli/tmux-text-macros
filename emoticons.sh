@@ -5,5 +5,5 @@ emoticons=(
 'ʕ⁰̈●̫⁰̈ʔ: Bear [emoticon]'
 '(° ͜ʖ ͡°): Lenny [emoticon]'
 '(╯°□°）╯︵┻━┻:Table flip [emoticon]'
-'(•___•) [emoticon]'
+'(•___•): [emoticon]'
 )
