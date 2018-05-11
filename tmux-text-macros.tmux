@@ -37,7 +37,7 @@ tmux_macros() {
         all=("${alldefaults[@]}" "${custom[@]}")
         for e in "${all[@]}"; do
             echo $e
-        done|fzf-tmux|sed -e 's/\\/\\\\/g' -e 's/\(.*\):.*/\1/'|xargs -I_ tmux send-keys '_'
+        done|fzf-tmux -m|sed -e 's/\\/\\\\/g' -e 's/\(.*\):.*/\1/'|xargs -I_ tmux send-keys '_'
     else
         tmux bind e run-shell "$0 -r"
     fi
