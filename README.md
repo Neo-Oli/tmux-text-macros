@@ -21,6 +21,16 @@ You can add your own custom macros to `~/.tmux/custom-macros`. You can use the `
 
 If you want to disable all the default macros put `set -g @load-default-macros off` before loading the plugin in your `.tmux.conf`
 
+### Options
+
+#### @load-default-macros (default: "on")
+
+Disable all the default macros. Use this if you want to hide all emojis and just use your custom macros
+
+#### @split-macro-vertically (default: "off")
+
+Split the tmux window vertically instead of horizontally
+
 ## Usage
 
 Press `Prefix e` (normally `Ctrl+b e`) and choose a string by choosing it with the arrow keys or by entering a search string and press enter.

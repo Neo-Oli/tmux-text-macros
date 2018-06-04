@@ -13,6 +13,7 @@ tmux_macros() {
     if [ "$1" = "-r" ];then
         set -f
         local load_defaults=$(get_tmux_option "@load-default-macros" "on")
+        local split_vertically=$(get_tmux_option "@split-macro-vertically" "off")
 
         #Macro strings. Everything after the last ":" gets removed and is just there as a search string in fzf
         local BASEDIR=$(dirname $0)
@@ -35,9 +36,15 @@ tmux_macros() {
             )
         fi
         all=("${alldefaults[@]}" "${custom[@]}")
+
+        if [ "$split_vertically" = "on" ];then
+            split="-r 50%"
+        else
+            split="-d 50%"
+        fi
         for e in "${all[@]}"; do
             echo $e
-        done|fzf-tmux -m|sed -e 's/\\/\\\\/g' -e 's/\(.*\):.*/\1/'|xargs -I_ tmux send-keys '_'
+        done|fzf-tmux -m $split|sed -e 's/\\/\\\\/g' -e 's/\(.*\):.*/\1/'|xargs -I_ tmux send-keys '_'
     else
         tmux bind e run-shell "$0 -r"
     fi
