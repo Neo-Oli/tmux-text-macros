@@ -19,17 +19,20 @@ By default it contains all the emojis and a few emoticons
 
 You can add your own custom macros to `~/.tmux/custom-macros`. You can use the `custom-macros` file as a template.
 
-If you want to disable all the default macros put `set -g @load-default-macros off` before loading the plugin in your `.tmux.conf`
+If you want to disable all the default macros put `set -g @ttm-load-default-macros off` before loading the plugin in your `.tmux.conf`
 
 ### Options
 
-#### @load-default-macros (default: "on")
+#### @ttm-load-default-macros (default: "on")
 
 Disable all the default macros. Use this if you want to hide all emojis and just use your custom macros
 
-#### @split-macro-vertically (default: "off")
+#### @ttm-window-mode (default: "horizontal")
 
-Split the tmux window vertically instead of horizontally
+How to split the tmux window
+* `horizontal`
+* `vertical`
+* `full` -> new window
 
 ## Usage
 
