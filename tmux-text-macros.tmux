@@ -38,7 +38,6 @@ tmux_macros() {
             echo $e
         done|fzf|sed -e 's/\\/\\\\/g' -e 's/\(.*\):.*/\1/'|xargs -I_ tmux send-keys -t "$PANE" '_'
     else
-        echo $window_mode
         if [ "$window_mode" = "vertical" ];then
             command="tmux split-window -v"
         elif [ "$window_mode" = "full" ];then
