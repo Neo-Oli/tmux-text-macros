@@ -34,9 +34,10 @@ tmux_macros() {
         fi
         all=("${alldefaults[@]}" "${custom[@]}")
 
-        for e in "${all[@]}"; do
+        tosend="$(for e in "${all[@]}"; do
             echo $e
-        done|fzf|sed -e 's/\\/\\\\/g' -e 's/\(.*\):.*/\1/'|xargs -I_ tmux send-keys -t "$PANE" '_'
+        done|fzf|sed -e 's/\\/\\\\/g' -e 's/\(.*\):.*/\1/')"
+        tmux send-keys -t "$PANE" -l "" "$tosend"
     else
         if [ "$window_mode" = "vertical" ];then
             command="tmux split-window -v"
