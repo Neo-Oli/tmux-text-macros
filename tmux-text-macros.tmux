@@ -12,7 +12,7 @@ get_tmux_option() {
 tmux_macros() {
     if [ "$1" = "-r" ];then
         set -f
-        #Macro strings. Everything after the last ":" gets removed and is just there as a search string in fzf
+        #Macro strings. The first ":" and everything after gets removed and is just there as a search string in fzf
         local BASEDIR=$(dirname $0)
 
         custom=()
@@ -36,7 +36,7 @@ tmux_macros() {
 
         tosend="$(for e in "${all[@]}"; do
             echo $e
-        done|fzf|sed -e 's/\(.*\):.*/\1/')"
+        done|fzf|sed -e 's/\([^:]*\):.*/\1/')"
         tmux send-keys -t "$PANE" -l "" "$tosend"
     else
         if [ "$window_mode" = "vertical" ];then
