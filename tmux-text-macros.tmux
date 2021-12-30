@@ -25,11 +25,13 @@ tmux_macros() {
             source $BASEDIR/emoticons.sh
             source $BASEDIR/blocks.sh
             source $BASEDIR/boxdrawing.sh
+            source $BASEDIR/arrows.sh
             alldefaults=(
                 "${emoticons[@]}"
                 "${emojis[@]}"
                 "${blocks[@]}"
                 "${boxdrawing[@]}"
+                "${arrows[@]}"
             )
         fi
         all=("${alldefaults[@]}" "${custom[@]}")
