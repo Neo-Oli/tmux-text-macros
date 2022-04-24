@@ -26,12 +26,14 @@ tmux_macros() {
             source $BASEDIR/blocks.sh
             source $BASEDIR/boxdrawing.sh
             source $BASEDIR/arrows.sh
+            source $BASEDIR/nerd-fonts-icons.sh
             alldefaults=(
                 "${emoticons[@]}"
                 "${emojis[@]}"
                 "${blocks[@]}"
                 "${boxdrawing[@]}"
                 "${arrows[@]}"
+                "${nerd_fonts_icons[@]}"
             )
         fi
         all=("${alldefaults[@]}" "${custom[@]}")
