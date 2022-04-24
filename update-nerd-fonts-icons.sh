@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone https://github.com/ryanoasis/nerd-fonts.git || git pull -D nerd-fonts
+git clone https://github.com/ryanoasis/nerd-fonts.git || git -C nerd-fonts pull
 source nerd-fonts/bin/scripts/lib/i_all.sh
 echo "nerd_fonts_icons=(" > nerd-fonts-icons.sh
 for i in $(typeset -p | grep 'declare -- i_' | grep -o -P '(?<=declare -- i_).*(?=\=)'); do
