@@ -1,4 +1,6 @@
 #!/bin/sh
 echo "emojis=(" > emojis.sh
-curl "https://raw.githubusercontent.com/amio/emoji.json/master/emoji.json" | jq -r ".[] | \"'\(.char): \(.name) [\(.category)]'\"" | sed -e 's/:/;/g' -e 's/;/:/1' >> emojis.sh
+curl "https://raw.githubusercontent.com/muan/unicode-emoji-json/main/data-by-emoji.json" \
+    | jq -r ". | keys[] as \$k | \"'\(\$k): \(.[\$k] | .name ) [\(.[\$k] | .group)]'\"" \
+    | sed -e 's/:/;/g' -e 's/;/:/1' >> emojis.sh
 echo ")" >> emojis.sh
