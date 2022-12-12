@@ -22,6 +22,7 @@ tmux_macros() {
         alldefaults=()
         if [ "$load_defaults" = "on" ];then
             source $BASEDIR/emojis.sh
+            source $BASEDIR/emojis-narrow.sh
             source $BASEDIR/emoticons.sh
             source $BASEDIR/blocks.sh
             source $BASEDIR/boxdrawing.sh
@@ -30,6 +31,7 @@ tmux_macros() {
             alldefaults=(
                 "${emoticons[@]}"
                 "${emojis[@]}"
+                "${emojisnarrow[@]}"
                 "${blocks[@]}"
                 "${boxdrawing[@]}"
                 "${arrows[@]}"
