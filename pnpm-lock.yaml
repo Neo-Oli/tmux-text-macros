@@ -1,12 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
-  prettier: ^2.8.4
-  prettier-plugin-sh: ^0.10.2
+  prettier: 2.8.4
+  prettier-plugin-sh: ^0.12.8
 
 dependencies:
   prettier: 2.8.4
-  prettier-plugin-sh: 0.10.2_prettier@2.8.4
+  prettier-plugin-sh: 0.12.8_prettier@2.8.4
 
 packages:
 
@@ -16,7 +16,7 @@ packages:
     dependencies:
       cross-spawn: 7.0.3
       is-glob: 4.0.3
-      open: 8.4.1
+      open: 8.4.2
       picocolors: 1.0.0
       tiny-glob: 0.2.9
       tslib: 2.5.0
@@ -73,14 +73,12 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: false
 
-  /nanoid/3.3.4:
-    resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
+  /mvdan-sh/0.10.1:
+    resolution: {integrity: sha512-kMbrH0EObaKmK3nVRKUIIya1dpASHIEusM13S4V1ViHFuxuNxCo+arxoa6j/dbV22YBGjl7UKJm9QQKJ2Crzhg==}
     dev: false
 
-  /open/8.4.1:
-    resolution: {integrity: sha512-/4b7qZNhv6Uhd7jjnREh1NjnPxlTq+XNWPG88Ydkj5AILcA5m3ajvcg57pB24EQjKv0dK62XnDqk9c/hkIG5Kg==}
+  /open/8.4.2:
+    resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
     engines: {node: '>=12'}
     dependencies:
       define-lazy-prop: 2.0.0
@@ -97,15 +95,16 @@ packages:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
     dev: false
 
-  /prettier-plugin-sh/0.10.2_prettier@2.8.4:
-    resolution: {integrity: sha512-4HnLebvyiZ8Ilj5cEu5D8rCxrHqCE/1c+6GhZ0rARxFfqHhxcLBcG6Lx48wAD00IPYj2YPDtfnSlS9owWtLhvA==}
-    engines: {node: '>=12.20'}
+  /prettier-plugin-sh/0.12.8_prettier@2.8.4:
+    resolution: {integrity: sha512-VOq8h2Gn5UzrCIKm4p/nAScXJbN09HdyFDknAcxt6Qu/tv/juu9bahxSrcnM9XWYA+Spz1F1ANJ4LhfwB7+Q1Q==}
+    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     peerDependencies:
       prettier: ^2.0.0
     dependencies:
+      mvdan-sh: 0.10.1
       prettier: 2.8.4
-      sh-syntax: 0.1.4
-      synckit: 0.7.3
+      sh-syntax: 0.3.7
+      synckit: 0.8.5
     dev: false
 
   /prettier/2.8.4:
@@ -114,11 +113,10 @@ packages:
     hasBin: true
     dev: false
 
-  /sh-syntax/0.1.4:
-    resolution: {integrity: sha512-PbReZBaylc3YSo+SbZQd5b8/I0jh8CQTdy5YRBNSVtIyuJ+l1dCygR8UhWBMz3p431ZDs2Wp59qUpIUvPCcssA==}
-    engines: {node: '>=v12.20'}
+  /sh-syntax/0.3.7:
+    resolution: {integrity: sha512-xIB/uRniZ9urxAuXp1Ouh/BKSI1VK8RSqfwGj7cV57HvGrFo3vHdJfv8Tdp/cVcxJgXQTkmHr5mG5rqJW8r4wQ==}
+    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dependencies:
-      nanoid: 3.3.4
       tslib: 2.5.0
     dev: false
 
@@ -134,9 +132,9 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /synckit/0.7.3:
-    resolution: {integrity: sha512-jNroMv7Juy+mJ/CHW5H6TzsLWpa1qck6sCHbkv8YTur+irSq2PjbvmGnm2gy14BUQ6jF33vyR4DPssHqmqsDQw==}
-    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+  /synckit/0.8.5:
+    resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
+    engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
       '@pkgr/utils': 2.3.1
       tslib: 2.5.0
