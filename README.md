@@ -34,6 +34,10 @@ How to split the tmux window
 * `vertical`
 * `full` -> new window
 
+#### @ttm-keybind (default: "e")
+
+Setting the keybind for tmux-text-macros to execute.
+
 ## Usage
 
 Press `Prefix e` (normally `Ctrl+b e`) and choose a string by choosing it with the arrow keys or by entering a search string and press enter.
