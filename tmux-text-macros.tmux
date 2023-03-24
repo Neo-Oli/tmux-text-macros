@@ -52,9 +52,10 @@ tmux_macros() {
         else
             command="tmux split-window -h"
         fi
-        tmux bind e run-shell "$command -n Macros \"PANE='#{pane_id}' $0 -r\""
+        tmux bind "$keybind" run-shell "$command -n Macros \"PANE='#{pane_id}' $0 -r\""
     fi
 }
 window_mode=$(get_tmux_option "@ttm-window-mode" "horizontal")
 load_defaults=$(get_tmux_option "@ttm-load-default-macros" "on")
+keybind=$(get_tmux_option "@ttm-keybind" "e")
 tmux_macros $@
