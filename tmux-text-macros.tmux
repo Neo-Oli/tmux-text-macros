@@ -48,11 +48,11 @@ tmux_macros() {
         if [ "$window_mode" = "vertical" ];then
             command="tmux split-window -v"
         elif [ "$window_mode" = "full" ];then
-            command="tmux new-window"
+            command="tmux new-window -n Macros"
         else
             command="tmux split-window -h"
         fi
-        tmux bind "$keybind" run-shell "$command -n Macros \"PANE='#{pane_id}' $0 -r\""
+        tmux bind "$keybind" run-shell "$command \"PANE='#{pane_id}' $0 -r\""
     fi
 }
 window_mode=$(get_tmux_option "@ttm-window-mode" "horizontal")
