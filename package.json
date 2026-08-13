@@ -4,6 +4,6 @@
     "prettier-plugin-sh": "^0.12.8"
   },
   "scripts": {
-    "lint": "prettier --write  *.sh"
+    "lint": "prettier --write  *.sh *.tmux"
   }
 }

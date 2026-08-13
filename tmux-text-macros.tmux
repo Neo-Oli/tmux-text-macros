@@ -10,17 +10,17 @@ get_tmux_option() {
     fi
 }
 tmux_macros() {
-    if [ "$1" = "-r" ];then
+    if [ "$1" = "-r" ]; then
         set -f
         #Macro strings. Everything after the last ":" gets removed and is just there as a search string in fzf
         local BASEDIR=$(dirname "$0")
 
         custom=()
-        if [ -e "$HOME/.tmux/custom-macros" ];then
+        if [ -e "$HOME/.tmux/custom-macros" ]; then
             source "$HOME"/.tmux/custom-macros
         fi
         alldefaults=()
-        if [ "$load_defaults" = "on" ];then
+        if [ "$load_defaults" = "on" ]; then
             source "$BASEDIR"/emojis.sh
             source "$BASEDIR"/emojis-narrow.sh
             source "$BASEDIR"/emoticons.sh
@@ -42,12 +42,12 @@ tmux_macros() {
 
         tosend="$(for e in "${all[@]}"; do
             echo "$e"
-        done|fzf -m|sed -e 's/\(.*\):.*/\1/'| tr '\n' ' ')"
+        done | fzf -m | sed -e 's/\(.*\):.*/\1/' | tr '\n' ' ')"
         tmux send-keys -t "$PANE" -l "" "$tosend"
     else
-        if [ "$window_mode" = "vertical" ];then
+        if [ "$window_mode" = "vertical" ]; then
             command="tmux split-window -v"
-        elif [ "$window_mode" = "full" ];then
+        elif [ "$window_mode" = "full" ]; then
             command="tmux new-window -n Macros"
         else
             command="tmux split-window -h"
