@@ -42,7 +42,7 @@ tmux_macros() {
 
         tosend="$(for e in "${all[@]}"; do
             echo "$e"
-        done|fzf|sed -e 's/\(.*\):.*/\1/')"
+        done|fzf -m|sed -e 's/\(.*\):.*/\1/'| tr '\n' ' ')"
         tmux send-keys -t "$PANE" -l "" "$tosend"
     else
         if [ "$window_mode" = "vertical" ];then
